@@ -24,4 +24,29 @@
     </ion-slides>
   </section>
 
+
+  <section class="products">
+    <div class="card" *ngFor="let v of [0,1,2,3,4,5,6,7,8,9,10,11,12]">
+      <div class="card__image">
+        <img src="https://purepng.com/public/uploads/large/purepng.com-cupcupopen-containertablewarecarrying-drinksceramic-cup-1701528266193sfx1o.png" alt="">
+      </div>
+      <div class="card__content">
+        <div class="card__content__title">Ceramic cup</div>
+        <div class="card__content__price">$24</div>
+        <div class="card__content__rating">
+          <ion-icon name="star" class="card__content__rating--active"></ion-icon>
+          <ion-icon name="star" class="card__content__rating--active"></ion-icon>
+          <ion-icon name="star" class="card__content__rating--active"></ion-icon>
+          <ion-icon name="star" class="card__content__rating--active"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+        </div>
+      </div>
+      <div class="card__like-btn" [class.card__like-btn--active]="v == 1">
+        <ion-icon name="heart"></ion-icon>
+      </div>
+      <div class="card__add-btn">
+        <ion-icon name="add"></ion-icon>
+      </div>
+    </div>
+  </section>
 </ion-content>
