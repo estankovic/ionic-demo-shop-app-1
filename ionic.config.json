@@ -1,0 +1,7 @@
+{
+  "name": "ionic-uniqa-demo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
