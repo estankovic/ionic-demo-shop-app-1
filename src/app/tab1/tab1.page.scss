@@ -1,6 +1,6 @@
 ion-content {
+  padding: 1rem;
   & > :last-child {
-    padding: 1rem;
     margin-bottom: 75px;
   }
 }
@@ -8,6 +8,8 @@ ion-content {
 .header {
   display: flex;
   justify-content: space-between;
+
+  padding: 1.5rem 1rem 0 1rem;
 
   &__title {
     display: flex;
@@ -31,6 +33,26 @@ ion-content {
     img {
       border-radius: 50%;
       border: 4px solid white;
+    }
+  }
+}
+
+.slides {
+  h2 {
+    padding: 0 1rem;
+    margin-bottom: 0;
+  }
+
+  ion-slides {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    ion-slide {
+      background-color: #008cff;
+      height: 120px;
+      border-radius: 1rem;
+      box-shadow: 0px 6px 17px 0px rgba(0,140,255,0.66);
+
     }
   }
 }

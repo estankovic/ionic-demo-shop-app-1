@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+  sliderOptions = {
+    slidesPerView: 1.7,
+    spaceBetween: 30,
+    freeMode: true,
+    slidesOffsetAfter: 16,
+    slidesOffsetBefore: 16,
+    mousewheel: {
+      enabled: true
+    }
+  };
+
   constructor() {}
 
 }
