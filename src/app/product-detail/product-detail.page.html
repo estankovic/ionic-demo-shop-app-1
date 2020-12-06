@@ -19,21 +19,17 @@
     </div>
     <div class="product__header">
       <div class="product__header__title">Nike Shoes</div>
-      <div class="product__header__rating">4.5</div>
+      <div class="product__header__rating">
+        <ion-chip><ion-icon name="star"></ion-icon> 4.5</ion-chip>
+      </div>
     </div>
     <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut blanditiis dolorem, dolorum eligendi excepturi incidunt labore, laboriosam, mollitia necessitatibus pariatur provident quaerat quas quasi quis sit soluta tempora veritatis!</p>
-    <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut blanditiis dolorem, dolorum eligendi excepturi incidunt labore, laboriosam, mollitia necessitatibus pariatur provident quaerat quas quasi quis sit soluta tempora veritatis!</p>
-    <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut blanditiis dolorem, dolorum eligendi excepturi incidunt labore, laboriosam, mollitia necessitatibus pariatur provident quaerat quas quasi quis sit soluta tempora veritatis!</p>
-    <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut blanditiis dolorem, dolorum eligendi excepturi incidunt labore, laboriosam, mollitia necessitatibus pariatur provident quaerat quas quasi quis sit soluta tempora veritatis!</p>
-    <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut blanditiis dolorem, dolorum eligendi excepturi incidunt labore, laboriosam, mollitia necessitatibus pariatur provident quaerat quas quasi quis sit soluta tempora veritatis!</p>
-    <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut blanditiis dolorem, dolorum eligendi excepturi incidunt labore, laboriosam, mollitia necessitatibus pariatur provident quaerat quas quasi quis sit soluta tempora veritatis!</p>
-    <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut blanditiis dolorem, dolorum eligendi excepturi incidunt labore, laboriosam, mollitia necessitatibus pariatur provident quaerat quas quasi quis sit soluta tempora veritatis!</p>
-    <div class="product__variants">
+    <div class="product__variants" *ngFor="let o of [0,1,2,3,4]">
       <div class="product__variants__title">Size</div>
       <div class="product__variants__options">
         <ion-chip>US 6.5</ion-chip>
         <ion-chip>US 7</ion-chip>
-        <ion-chip>US 7.5</ion-chip>
+        <ion-chip color="success">US 7.5</ion-chip>
         <ion-chip>US 8</ion-chip>
         <ion-chip>US 8.5</ion-chip>
         <ion-chip>US 9</ion-chip>

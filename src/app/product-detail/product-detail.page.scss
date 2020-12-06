@@ -47,17 +47,59 @@
 
   .product {
 
-      &__images {
-        height: 400px;
+    padding: 0 1rem;
 
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-        }
+    &__images {
+      height: 400px;
 
+      margin: 0 -1rem;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
       }
 
+    }
+
+    &__header {
+      display: flex;
+      margin-top: 1rem;
+
+      &__title {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+      }
+
+      &__rating {
+        transform: scale(.7);
+
+        ion-icon {
+          margin-right: .5rem;
+          margin-left: 0;
+          color: #ddb523;
+        }
+      }
+    }
+
+    &__description {
+      color: var(--ion-color-medium);
+    }
+
+
+    &__variants {
+      display: flex;
+      margin-bottom: 1.5rem;
+
+      &__title {
+        width: 30%;
+        font-weight: bolder;
+        padding-top: .5rem;
+
+      }
+    }
 
   }
 
