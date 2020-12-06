@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProductDetailPageRoutingModule } from './product-detail-routing.module';
 
 import { ProductDetailPage } from './product-detail.page';
+import {ImageContentHeaderDirective} from '../directives/image-content-header.directive';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ProductDetailPage } from './product-detail.page';
     IonicModule,
     ProductDetailPageRoutingModule
   ],
-  declarations: [ProductDetailPage]
+  declarations: [ProductDetailPage, ImageContentHeaderDirective]
 })
 export class ProductDetailPageModule {}
