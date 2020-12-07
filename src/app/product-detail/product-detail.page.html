@@ -3,10 +3,12 @@
   <ion-header slot="fixed">
     <ion-toolbar imageContentHeader [container]="container">
       <ion-buttons slot="start">
-        <ion-back-button defaultHref="tabs/tab/1"></ion-back-button>
+        <ion-button color="dark" (click)="goBack()">
+          <ion-icon slot="icon-only" ios="chevron-back" md="arrow-back"></ion-icon>
+        </ion-button>
       </ion-buttons>
       <ion-buttons slot="end">
-        <ion-button>
+        <ion-button color="dark">
           <ion-icon slot="icon-only" name="heart"></ion-icon>
         </ion-button>
       </ion-buttons>
