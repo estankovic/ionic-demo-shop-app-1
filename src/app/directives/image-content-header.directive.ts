@@ -10,12 +10,7 @@ export class ImageContentHeaderDirective implements AfterViewInit {
 
   @Input() imageSectionHeight = 300;
 
-
-  private toolbarHeight = 0;
-
-  constructor(private readonly el: ElementRef<HTMLElement>) {
-    console.log('HERE')
-  }
+  constructor(private readonly el: ElementRef<HTMLElement>) { }
 
   ngAfterViewInit(): void {
     this.initTransparency();
@@ -34,19 +29,11 @@ export class ImageContentHeaderDirective implements AfterViewInit {
   async registerListeners() {
 
     this.container.ionScroll.subscribe(({detail}) => {
-      console.log(this.calcToolbarHeight())
-
-
       if (detail.scrollTop > (this.imageSectionHeight + this.calcToolbarHeight())) {
         this.el.nativeElement.style.removeProperty('--background');
       } else {
         this.el.nativeElement.style.setProperty('--background', 'transparent');
       }
-
     });
   }
-
-
-
-
 }
