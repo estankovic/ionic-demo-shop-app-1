@@ -41,6 +41,10 @@
         font-size: 2.5rem;
         font-weight: bold;
       }
+
+      ion-button {
+        --color: white;
+      }
     }
   }
 
@@ -98,7 +102,40 @@
         width: 30%;
         font-weight: bolder;
         padding-top: .5rem;
+      }
 
+      &__options {
+        &__chip {
+          &--active {
+            --color: white;
+            --background: var(--ion-color-primary);
+          }
+
+          &--hot-pink {
+            --color: #ff69b4;
+            --background: #fdeef6;
+          }
+
+          &--turquoise {
+            --color: white;
+            --background: #369ba4;
+          }
+
+          &--peru {
+            --color: #cd853f;
+            --background: #f8f1ea;
+          }
+
+          &--crimson {
+            --color: #dd3052;
+            --background: #f8e4e8;
+          }
+
+          &--dark-violet {
+            --color: #9e1ed5;
+            --background: #f1e2f7;
+          }
+        }
       }
     }
 
