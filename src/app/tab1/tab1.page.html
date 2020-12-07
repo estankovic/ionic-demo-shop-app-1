@@ -12,40 +12,46 @@
   <section class="slides">
     <h2>Popular</h2>
     <ion-slides [options]="sliderOptions">
-      <ion-slide>
-        <h1>Slide 1</h1>
-      </ion-slide>
-      <ion-slide>
-        <h1>Slide 2</h1>
-      </ion-slide>
-      <ion-slide>
-        <h1>Slide 3</h1>
+      <ion-slide
+        class="slide" *ngFor="let s of slides"
+      >
+        <span class="slide__title">{{s.name}}</span>
+        <div
+          class="slide__bg"
+          [ngStyle]="{
+            'box-shadow': getBgShadowString(s.color),
+            'background-color': getBgColorString(s.color),
+            'background-image': getBgImageString(s.image)
+          }"></div>
       </ion-slide>
     </ion-slides>
   </section>
 
 
   <section class="products">
-    <div class="card" *ngFor="let v of [0,1,2,3,4,5,6,7,8,9,10,11,12]" (click)="openDetail()">
-      <div class="card__image">
-        <img src="https://purepng.com/public/uploads/large/purepng.com-cupcupopen-containertablewarecarrying-drinksceramic-cup-1701528266193sfx1o.png" alt="">
-      </div>
-      <div class="card__content">
-        <div class="card__content__title">Ceramic cup</div>
-        <div class="card__content__price">$24</div>
-        <div class="card__content__rating">
-          <ion-icon name="star" class="card__content__rating--active"></ion-icon>
-          <ion-icon name="star" class="card__content__rating--active"></ion-icon>
-          <ion-icon name="star" class="card__content__rating--active"></ion-icon>
-          <ion-icon name="star" class="card__content__rating--active"></ion-icon>
-          <ion-icon name="star"></ion-icon>
+    <h2>Browse</h2>
+    <div class="products__list">
+      <div class="card" *ngFor="let p of products" (click)="openDetail()">
+        <div class="card__image">
+          <img [src]="p.image" alt="">
         </div>
-      </div>
-      <div class="card__like-btn" [class.card__like-btn--active]="v == 1">
-        <ion-icon name="heart"></ion-icon>
-      </div>
-      <div class="card__add-btn">
-        <ion-icon name="add"></ion-icon>
+        <div class="card__content">
+          <div class="card__content__title">{{p.name}}</div>
+          <div class="card__content__price">$24</div>
+          <div class="card__content__rating">
+            <ion-icon name="star" class="card__content__rating--active"></ion-icon>
+            <ion-icon name="star" class="card__content__rating--active"></ion-icon>
+            <ion-icon name="star" class="card__content__rating--active"></ion-icon>
+            <ion-icon name="star" class="card__content__rating--active"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </div>
+        </div>
+        <div class="card__like-btn" [class.card__like-btn--active]="p.liked">
+          <ion-icon name="heart"></ion-icon>
+        </div>
+        <div class="card__add-btn">
+          <ion-icon name="add"></ion-icon>
+        </div>
       </div>
     </div>
   </section>
