@@ -1,58 +1,5 @@
 <ion-content [fullscreen]="true">
-  <div class="header">
-    <div class="header__title">
-      <div class="header__title__secondary">Greeting</div>
-      <div class="header__title__primary">Emma</div>
-    </div>
-    <div class="header__profile-image">
-      <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Emma">
-    </div>
-  </div>
 
-  <section class="slides">
-    <h2>Popular</h2>
-    <ion-slides [options]="sliderOptions">
-      <ion-slide
-        class="slide" *ngFor="let s of slides"
-      >
-        <span class="slide__title">{{s.name}}</span>
-        <div
-          class="slide__bg"
-          [ngStyle]="{
-            'box-shadow': getBgShadowString(s.color),
-            'background-color': getBgColorString(s.color),
-            'background-image': getBgImageString(s.image)
-          }"></div>
-      </ion-slide>
-    </ion-slides>
-  </section>
+  ...content
 
-
-  <section class="products">
-    <h2>Browse</h2>
-    <div class="products__list">
-      <div class="card" *ngFor="let p of products" (click)="openDetail()">
-        <div class="card__image">
-          <img [src]="p.image" alt="">
-        </div>
-        <div class="card__content">
-          <div class="card__content__title">{{p.name}}</div>
-          <div class="card__content__price">$24</div>
-          <div class="card__content__rating">
-            <ion-icon name="star" class="card__content__rating--active"></ion-icon>
-            <ion-icon name="star" class="card__content__rating--active"></ion-icon>
-            <ion-icon name="star" class="card__content__rating--active"></ion-icon>
-            <ion-icon name="star" class="card__content__rating--active"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-          </div>
-        </div>
-        <div class="card__like-btn" [class.card__like-btn--active]="p.liked">
-          <ion-icon name="heart"></ion-icon>
-        </div>
-        <div class="card__add-btn">
-          <ion-icon name="add"></ion-icon>
-        </div>
-      </div>
-    </div>
-  </section>
 </ion-content>
